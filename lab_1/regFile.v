@@ -25,7 +25,10 @@ end
 always@(posedge i_clk)
 begin:WRITE_TO_MEM
     if(i_we)
+    begin
+    if(i_waddr != 0)
         MEM[i_waddr] <= i_wdata;
+    end
 end
   
 endmodule
