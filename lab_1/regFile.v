@@ -16,6 +16,9 @@ output reg [31:0]  o_rdata1, o_rdata2;
 
 reg [31:0] MEM [31:0];
 
+initial
+    MEM[0] = 0;
+
 always@(posedge i_clk)
 begin:READ_FROM_MEM
     o_rdata1 <= MEM[i_raddr1];
