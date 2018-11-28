@@ -17,7 +17,6 @@ assign o_zf = ~| o_result;// NOR-reduction of all bits
 
 always@*
 begin: ALU_OPS
-    reg ex;//extra bit (sign extended)
     case (i_control)
         AND:    o_result =   i_op1 & i_op2;
         OR:     o_result =   i_op1 | i_op2;

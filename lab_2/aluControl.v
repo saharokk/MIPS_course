@@ -18,6 +18,8 @@ begin
             6'b100_100: o_aluControl = 4'b0000;//and
             6'b100_101: o_aluControl = 4'b0001;//or
             6'b101_010: o_aluControl = 4'b0111;//SLT
+            6'b100_011: o_aluControl = 4'b0110;//subu
+            
             default: o_aluControl = 4'b0010;
         endcase        
     end
